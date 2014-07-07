@@ -1,0 +1,20 @@
+{
+  "name": "Karuru",
+  "version": "0.0.0",
+  "authors": [
+    "German <german@imamonsta.com>"
+  ],
+  "description": "MEAN aplication",
+  "moduleType": [
+    "node"
+  ],
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "jquery": "~2.1.1",
+    "toastr": "~2.0.3",
+    "angular": "~1.2.19",
+    "angular-resource": "~1.2.19",
+    "angular-route": "~1.2.19"
+  }
+}
