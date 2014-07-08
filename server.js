@@ -19,7 +19,10 @@ console.log(__dirname);
 app.set('views', __dirname + '/server/views');
 app.set('view engine', 'jade');
 app.use(logger('dev'));
-app.use(bodyParser());
+app.use(bodyParser.urlencoded({
+  extended: true
+}));
+app.use(bodyParser.json())
 app.use(stylus.middleware(
 	{
 		src: __dirname + '/public',
