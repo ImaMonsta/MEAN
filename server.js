@@ -29,16 +29,16 @@ app.use(express.static(__dirname + '/public'));
 
 /////////////////MONGOOSE
 mongoose.connect(MONGOHQ_URL);
-var db = mongoose.conection;
+var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'conection error ...'));
 db.once('open', function callback(){
 	console.log('karuru db open');
 });
 
 var messageSchema = mongoose.Schema({message: String});
-var Message = mongoose.model('Message', messageSchema);
+var Message = mongoose.model('messages', messageSchema);
 var mongoMessage;
-Message.findOne().exec(function(err,messageSchema){
+Message.findOne().exec(function(err,messageDoc){
 	mongoMessage = messageDoc.message;
 });
 
