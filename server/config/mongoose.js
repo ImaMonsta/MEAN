@@ -31,10 +31,10 @@ User.find({}).exec(function(err, collection){
 			var salt, hash;
 			salt = createSalt();
 			hash = hashPwd(salt, 'German');
-			User.create({firstName:'German', lastName:'Garcia', username:'German', salt: salt, hashed_pwd:hash});
+			User.create({firstName:'German', lastName:'Garcia', username:'German', salt: salt, hashed_pwd:hash, roles:['admin']});
 			salt = createSalt();
 			hash = hashPwd(salt, 'Elisa');
-			User.create({firstName:'Elisa', lastName:'Calderon', username:'Elisa', salt: salt, hashed_pwd:hash});
+			User.create({firstName:'Elisa', lastName:'Calderon', username:'Elisa', salt: salt, hashed_pwd:hash, roles:[]});
 	}
 });
 
