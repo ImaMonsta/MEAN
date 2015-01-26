@@ -1,4 +1,4 @@
 MEAN
 ====
 
-MEAN Application
+MEAN Application (Mongo, Express, Angular, NodeJs)
